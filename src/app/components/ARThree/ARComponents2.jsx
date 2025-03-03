@@ -1,12 +1,13 @@
 "use client";
 import { useEffect } from "react"
-import { ARExperience } from "./Experience"
+import { ARExperience } from "./Experience2"
 
 const ARThree = () => {
   useEffect(() => {
     const arExperience = new ARExperience()
     arExperience.initScene()
     arExperience.setupARExperience()
+    arExperience.loadModel()
 
     return () => {
       arExperience.cleapUp()

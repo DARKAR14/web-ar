@@ -1,8 +1,8 @@
-import ARComponents from './components/ARThree/ARComponents'
+import ARComponents2 from './components/ARThree/ARComponents2'
 
 function Cucha() {
   return (
-    <ARComponents/>
+    <ARComponents2/>
   )
 }
 
