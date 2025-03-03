@@ -55,7 +55,7 @@ class ARExperience {
 
     this.scene.traverse(child => {
       if(child instanceof THREE.Mesh){
-        child.position.set(0,0, -0.5)
+        child.position.set(0,0, -1)
         .applyMatrix4(controller.matrixWorld)
         child.quaternion.setFromRotationMatrix(
           controller.matrixWorld
@@ -68,7 +68,7 @@ class ARExperience {
     const gltfloader = new GLTFLoader();
     gltfloader.load("./models/ponyo.glb", (gltf) => {
         const model = gltf.scene;
-        model.scale.set(0.3, 0.3, 0.3);
+        model.scale.set(0.1, 0.1, 0.1);
         this.scene.add(model);
     });   
   }
