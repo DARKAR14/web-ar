@@ -65,10 +65,12 @@ class ARExperience {
   }
 
   loadModel(){
-    const gltfloader = new GLTFLoader()
+    const gltfloader = new GLTFLoader();
     gltfloader.load("./models/ponyo.glb", (gltf) => {
-        this.scene.add(gltf.scene);
-    });    
+        const model = gltf.scene;
+        model.scale.set(0.3, 0.3, 0.3);
+        this.scene.add(model);
+    });   
   }
 
   initScene() {
